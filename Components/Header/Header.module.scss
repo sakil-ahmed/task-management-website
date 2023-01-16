@@ -1,0 +1,24 @@
+@use "./../../styles/Variables" as *;
+@use "./../../styles//Mixins" as *;
+
+// Header Styles
+.header {
+  padding: 54px 0;
+}
+.row {
+  @include flex(flex, space-between, center);
+}
+.header__menu {
+  .nav__items {
+    display: flex;
+    list-style: none;
+    gap: 36px;
+    padding: 0;
+  }
+  .nav__item {
+    a {
+      line-height: 24px;
+      font: normal $Regular 16px $sora;
+    }
+  }
+}

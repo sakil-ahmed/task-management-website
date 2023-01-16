@@ -1,0 +1,92 @@
+@use "./variables.scss" as *;
+
+/*
+  CSS reset code
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: $main-bg;
+  color: $text-primary;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*
+ some custom global styles
+*/
+
+// main container
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 30px;
+}
+
+// buttons
+
+.sm-btn {
+  border: none;
+  outline: none;
+  padding: 8px 28px;
+  background: transparent;
+  background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid #272633;
+  border-radius: 8px;
+  cursor: pointer;
+}
