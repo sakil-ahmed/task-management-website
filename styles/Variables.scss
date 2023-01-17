@@ -21,3 +21,18 @@ $Medium: 500;
 $SemiBold: 600;
 $Bold: 700;
 $ExtraBold: 800;
+
+//Media Breakpoints//
+// max-width
+
+$phone_max: "max-width:576px";
+$tablet_max: "max-width:768px";
+$desktop_max: "max-width:1024px";
+$large-screen_max: "max-width:1280px";
+
+// min-width
+
+$phone_min: "min-width:576px";
+$tablet_min: "min-width:768px";
+$desktop_min: "min-width:1024px";
+$large-screen_min: "min-width:1280px";

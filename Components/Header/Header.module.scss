@@ -3,22 +3,97 @@
 
 // Header Styles
 .header {
-  padding: 54px 0;
+  padding: 30px 0;
+  @media ($tablet_min) {
+    padding: 54px 0;
+  }
 }
 .row {
   @include flex(flex, space-between, center);
 }
 .header__menu {
+  transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  @media ($tablet_max) {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    padding-top: 70px;
+  }
   .nav__items {
     display: flex;
     list-style: none;
     gap: 36px;
     padding: 0;
+    @media ($tablet_max) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
   .nav__item {
+    text-align: center;
     a {
       line-height: 24px;
       font: normal $Regular 16px $sora;
+      position: relative;
+      padding-bottom: 3px;
     }
+    .active {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 50%;
+        background-color: #6aea5c;
+        animation: headerLink 0.3s;
+      }
+    }
+  }
+
+  .mobile__menu__close {
+    @media ($tablet_min) {
+      display: none;
+    }
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    @include flex(flex, center, center);
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.menu__active {
+  @media ($tablet_max) {
+    left: 0;
+  }
+}
+
+// Header Cta
+.header__cta {
+  @include flex(flex, center, center);
+  gap: 44px;
+  .mibile__menu__bar {
+    @media ($tablet_min) {
+      display: none;
+    }
+  }
+}
+
+// Animation
+
+@keyframes headerLink {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
   }
 }
