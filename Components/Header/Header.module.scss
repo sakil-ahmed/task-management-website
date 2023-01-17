@@ -39,8 +39,11 @@
       font: normal $Regular 16px $sora;
       position: relative;
       padding-bottom: 3px;
+      color: $text-sparagraph;
+      transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
     }
     .active {
+      color: $text-primary;
       &::after {
         content: "";
         position: absolute;
